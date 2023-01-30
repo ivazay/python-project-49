@@ -1,6 +1,10 @@
-from prompt import string
+import prompt
+
+
+def get_name():
+    player_name = prompt.string("What's your name? ")
+    return player_name
 
 
 def welcome_user():
-    name = string("What's your name?")
-    print(f'Hello, {name}!')
+    print(f'Hello, {get_name()}!')
