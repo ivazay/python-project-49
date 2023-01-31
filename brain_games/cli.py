@@ -4,13 +4,15 @@ from brain_games.scripts.brain_even import METAINFO as even_info
 from brain_games.scripts.brain_calc import METAINFO as calc_info
 from brain_games.scripts.brain_gcd import METAINFO as gcd_info
 from brain_games.scripts.brain_prog import METAINFO as prog_info
+from brain_games.scripts.brain_prime import METAINFO as prime_info
 from brain_games.scripts.game_logic import run_game
 
 GAMES = {
     'brain-even': even_info,
     'brain-calc': calc_info,
     'brain-gcd': gcd_info,
-    'brain-prog': prog_info
+    'brain-prog': prog_info,
+    'brain-prime': prime_info
 }
 
 
