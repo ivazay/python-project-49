@@ -1,14 +1,16 @@
 install:
 		poetry install
 
-brain-games:
-		poetry run brain-games
+#brain-games:
+#		poetry run brain-games
+
+# TODO find out the way to run game with option to choose game type
 
 brain-even:
-		poetry run brain-even
+		poetry run brain-games brain-even
 
 brain-calc:
-		poetry run brain-calc
+		poetry run brain-games brain-calc
 
 build:
 		poetry build
