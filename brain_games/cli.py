@@ -1,10 +1,26 @@
 import prompt
+from argparse import ArgumentParser
+from brain_games.scripts.brain_even import METAINFO as even_info
+from brain_games.scripts.brain_calc import METAINFO as calc_info
+from brain_games.scripts.game_logic import run_game
+
+GAMES = {
+    'brain-even': even_info,
+    'brain-calc': calc_info
+}
 
 
-def get_name():
+def main():
+    parser = ArgumentParser()
+    parser.add_argument('game_name', choices=GAMES.keys())
+    args = parser.parse_args()
+    game_name = args.game_name
+    print("Welcome to Brain Games!\n")
     player_name = prompt.string("What's your name? ")
-    return player_name
+    print(f'Hello, {player_name}!')
+    # print('Chose game')
+    run_game(GAMES[game_name]['rules'], player_name, GAMES[game_name]['round'])
 
 
-def welcome_user():
-    print(f'Hello, {get_name()}!')
+if __name__ == '__main__':
+    main()
