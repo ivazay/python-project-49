@@ -12,6 +12,9 @@ brain-even:
 brain-calc:
 		poetry run brain-games brain-calc
 
+brain-gcd:
+		poetry run brain-games brain-gcd
+
 build:
 		poetry build
 
